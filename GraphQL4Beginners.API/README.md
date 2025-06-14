@@ -42,7 +42,7 @@ This section provides examples of common GraphQL queries and mutations.
 ### **1\. Get a Single Book**
 
 Retrieve a book by its ID.
-
+```
 query {  
   getBook(id: 1\) {  
     id  
@@ -50,11 +50,12 @@ query {
     author  
   }  
 }
+```
 
 ### **2\. Get All Books with Cursor-based Pagination**
 
 Retrieve books using cursor-based pagination.
-
+```
 query {  
   getBooks(first: 10\) {  
     edges {  
@@ -71,11 +72,12 @@ query {
     }  
   }  
 }
+```
 
 ### **3\. Get Next Page of Books**
 
 Retrieve the next page of books using a cursor.
-
+```
 query {  
   getBooks(first: 10, after: "OQ==") {  
     edges {  
@@ -91,11 +93,13 @@ query {
     }  
   }  
 }
+```
 
 ### **4\. Add a New Book**
 
 Create a new book.
 
+```
 mutation {  
   addBook(title: "The Hobbit", author: "J.R.R. Tolkien") {  
     id  
@@ -103,11 +107,13 @@ mutation {
     author  
   }  
 }
+```
 
 ### **5\. Update a Book**
 
 Modify an existing book.
 
+```
 mutation {  
   updateBook(  
     id: 1  
@@ -118,19 +124,23 @@ mutation {
     title  
   }  
 }
+```
 
 ### **6\. Delete a Book**
 
 Remove a book from the database.
 
+```
 mutation {  
   deleteBook(id: 1\)  
 }
+```
 
 ### **7\. Filter Books with Pagination**
 
 Retrieve filtered books with pagination.
 
+```
 query {  
   getBooks(  
     first: 5  
@@ -149,11 +159,13 @@ query {
     }  
   }  
 }
+```
 
 ### **8\. Get Books with Sorting**
 
 Retrieve books sorted by title.
 
+```
 query {  
   getBooks(order: { title: DESC }) {  
     edges {  
@@ -164,11 +176,12 @@ query {
     }  
   }  
 }
-
+```
 ### **9\. Complex Filtering**
 
 Combine multiple filter conditions.
 
+```GraphQl
 query {  
   getBooks(  
     where: {  
@@ -187,7 +200,7 @@ query {
     }  
   }  
 }
-
+```
 ## **Database Initialization**
 
 The in-memory database is pre-seeded with 21 books covering various programming topics:
