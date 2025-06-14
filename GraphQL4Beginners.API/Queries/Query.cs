@@ -5,10 +5,9 @@ namespace GraphQL4Beginners.API.Queries;
 
 public class Query
 {
-    //[UseOffsetPaging]
-    //[UseProjection]
-    //[UseFiltering]
-    //[UseSorting]
+
+    [UseFiltering]
+    [UseSorting]
     [UsePaging]
     public IQueryable<Book> getBooks([Service] AppDbContext context)
         => context.Books.AsQueryable();
