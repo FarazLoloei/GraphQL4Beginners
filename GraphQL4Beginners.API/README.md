@@ -23,8 +23,8 @@ To run this project, you'll need:
 Follow these steps to get the project up and running:
 
 1. **Clone the repository**:  
-   git clone https://github.com/your-username/graphql-book-api.git  
-   cd graphql-book-api
+   git clone https://github.com/your-username/GraphQL4Beginners.git  
+   cd GraphQL4Beginners
 
 2. **Restore dependencies**:  
    dotnet restore
